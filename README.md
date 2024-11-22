@@ -20,14 +20,11 @@ Siga estas etapas para rodar o projeto localmente:
 
 ### 1. Pré-requisitos  
 - Python 3.8+ instalado  
--Maquina Virtual: python -m venv venv
-
--Ativar a Maquina Virtual: venv\Scripts\activate
-
--Instalar a biblioteca Flask: pip install flask 
+- Maquina Virtual : python -m venv venv
+- Ativar a Maquina Virtual: venv\Scripts\activate
+- Instalar a biblioteca Flask: pip install flask 
 
  
-
 ### 2. Clone o Repositório e rode ele :)
 ```bash
 git clone https://github.com/joaonascimentooo/Animes-SuperGeek.git
