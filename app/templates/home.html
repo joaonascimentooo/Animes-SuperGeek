@@ -6,36 +6,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Latest Episodes</title>
     
+    <!-- Link para o CSS externo -->
     <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
 </head>
 <body>
     <div class="container mt-5">
-    <h1 class="text-center">LATEST EPISODES</h1>
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <a href="#" class="thumbnail">
-                <img src="{{ url_for('static', filename='img/image3.png') }}" alt="Vídeo 1" class="img-fluid">
-            </a>
+        <h1 class="text-center mb-4">Latest Episodes</h1>
+      
+        <!-- Primeira fileira -->
+        <div class="row justify-content-center">
+          <div class="col-md-4 text-center">
+            <div class="thumbnail">
+              <a href="#" data-video="1">
+                <img src="{{ url_for('static', filename='img/image3.png') }}" alt="Video 1" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="thumbnail">
+              <a href="#" data-video="2">
+                <img src="{{ url_for('static', filename='img/image2.avif') }}" alt="Video 2" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="thumbnail">
+              <a href="#" data-video="3">
+                <img src="{{ url_for('static', filename='img/image1.webp') }}" alt="Video 3" class="img-fluid">
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-            <a href="#" class="thumbnail">
-                <img src="{{ url_for('static', filename='img/image2.avif') }}" alt="Vídeo 2" class="img-fluid">
-            </a>
+
+        <!-- Segunda fileira -->
+        <div class="row justify-content-center">
+          <div class="col-md-4 text-center">
+            <div class="thumbnail">
+              <a href="#" data-video="1">
+                <img src="{{ url_for('static', filename='img/image3.png') }}" alt="Video 1" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="thumbnail">
+              <a href="#" data-video="2">
+                <img src="{{ url_for('static', filename='img/image2.avif') }}" alt="Video 2" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="thumbnail">
+              <a href="#" data-video="3">
+                <img src="{{ url_for('static', filename='img/image1.webp') }}" alt="Video 3" class="img-fluid">
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-            <a href="#" class="thumbnail">
-                <img src="{{ url_for('static', filename='img/image1.webp') }}" alt="Vídeo 3" class="img-fluid">
-            </a>
+
+         <!-- Segunda fileira -->
+         <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+              <div class="thumbnail">
+                <a href="#" data-video="1">
+                  <img src="{{ url_for('static', filename='img/image3.png') }}" alt="Video 1" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="thumbnail">
+                <a href="#" data-video="2">
+                  <img src="{{ url_for('static', filename='img/image2.avif') }}" alt="Video 2" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="thumbnail">
+                <a href="#" data-video="3">
+                  <img src="{{ url_for('static', filename='img/image1.webp') }}" alt="Video 3" class="img-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+
+        <!-- Botão centralizado -->
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary">More Episodes</button>
         </div>
     </div>
-</div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-    
 {% endblock %}

@@ -1,35 +1,89 @@
+/* Estilo para o título */
 h1 {
-  margin-bottom: 20px; /* Define o espaçamento entre o título e as imagens */
-  font-size: 10; /* Tamanho do texto (opcional) */
-  color: #333; /* Cor do texto (opcional) */
+  margin-bottom: 40px; /* Maior espaçamento abaixo do título */
+  font-size: 32px; /* Tamanho maior para o título */
+  color: #333; /* Cor escura elegante */
+  font-weight: bold; /* Destaque no texto */
+  text-transform: uppercase; /* Todas as letras em maiúsculas */
   text-align: center; /* Centraliza o texto */
 }
 
-
+/* Estilo para os thumbnails */
 .thumbnail {
-  cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
-  width: 100px; /* Define largura */
-  height: 100px; /* Define altura igual à largura para garantir o círculo */
-  border: 4px solid #333; /* Borda ao redor */
-  border-radius: 100%; /* Torna a borda circular */
+  border-radius: 15px; /* Bordas levemente arredondadas */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
-  margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }
 
 .thumbnail img {
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-  border-radius: 15px; /* Define o arredondamento das quinas */
-  border: 2px solid #ddd; /* Adiciona uma borda para destacar */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
-  transition: transform 0.2s ease-in-out; /* Transição suave ao passar o mouse */
+  width: 100%; /* Largura completa do contêiner */
+  height: 220px; /* Altura uniforme */
+  object-fit: cover; /* Ajusta a imagem sem distorção */
+  transition: transform 0.3s ease; /* Animação ao passar o mouse */
+  border-radius: 15px; /* Bordas arredondadas */
 }
 
+/* Efeito ao passar o mouse no thumbnail */
 .thumbnail:hover {
-  transform: scale(1.1); /* Leve aumento no tamanho ao passar o mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Destaque maior na sombra */
-  border-color: #007bff; /* Altera a cor da borda no hover */
+  transform: translateY(-5px); /* Eleva levemente a imagem */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+.thumbnail img:hover {
+  transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+}
+
+/* Espaçamento entre as fileiras */
+.row {
+  margin-bottom: 30px;
+}
+
+/* Centralização de conteúdo nas colunas */
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para o botão */
+.btn-primary {
+  background-color: #007bff; /* Azul primário */
+  border: none; /* Remove a borda padrão */
+  border-radius: 20px; /* Bordas arredondadas */
+  padding: 12px 30px; /* Tamanho confortável */
+  font-size: 16px; /* Texto maior */
+  font-weight: bold; /* Destaque no texto */
+  color: #fff; /* Texto branco */
+  transition: background-color 0.3s, transform 0.3s; /* Animações suaves */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Azul mais escuro */
+  transform: scale(1.1); /* Efeito de crescimento */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .thumbnail img {
+    height: 180px; /* Reduz a altura das imagens */
+  }
+
+  .btn-primary {
+    padding: 10px 20px; /* Botão mais compacto */
+    font-size: 14px; /* Texto menor */
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 576px) {
+  .thumbnail img {
+    height: 150px; /* Reduz ainda mais a altura */
+  }
+
+  h1 {
+    font-size: 28px; /* Reduz o tamanho do título */
+  }
 }
