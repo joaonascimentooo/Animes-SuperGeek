@@ -1,0 +1,35 @@
+h1 {
+  margin-bottom: 20px; /* Define o espaçamento entre o título e as imagens */
+  font-size: 10; /* Tamanho do texto (opcional) */
+  color: #333; /* Cor do texto (opcional) */
+  text-align: center; /* Centraliza o texto */
+}
+
+
+.thumbnail {
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+  width: 100px; /* Define largura */
+  height: 100px; /* Define altura igual à largura para garantir o círculo */
+  border: 4px solid #333; /* Borda ao redor */
+  border-radius: 100%; /* Torna a borda circular */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 15px; /* Define o arredondamento das quinas */
+  border: 2px solid #ddd; /* Adiciona uma borda para destacar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+  transition: transform 0.2s ease-in-out; /* Transição suave ao passar o mouse */
+}
+
+.thumbnail:hover {
+  transform: scale(1.1); /* Leve aumento no tamanho ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Destaque maior na sombra */
+  border-color: #007bff; /* Altera a cor da borda no hover */
+}
