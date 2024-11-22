@@ -21,7 +21,9 @@ Siga estas etapas para rodar o projeto localmente:
 ### 1. Pré-requisitos  
 - Python 3.8+ instalado  
 -Maquina Virtual: python -m venv venv
+
 -Ativar a Maquina Virtual: venv\Scripts\activate
+
 -Instalar a biblioteca Flask: pip install flask 
 
  
