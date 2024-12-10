@@ -1,27 +1,51 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latest Episodes</title>
+    <!-- Link para o CSS personalizado -->
     <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
-    
+    <!-- Link para o Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
     <div class="container mt-5">
         <h1 class="text-center mb-4">Latest Episodes</h1>
+
         {% if videos %}
             <div class="row">
                 {% for video in videos %}
-                    <div class="col-md-4 mb-4">
+                    <div class="col-12 col-md-4 mb-4">
                         <div class="card">
                             <img src="{{ video.image_path }}" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="Imagem do Anime">
                             <div class="card-body">
                                 <h5 class="card-title">{{ video.title }}</h5>
-                                <a href="{{ video.video_link }}" class="btn btn-primary" target="_blank">Assistir ao Vídeo</a>
+                                <a href="{{ video.video_link }}" class="btn btn-custom" target="_blank">Assistir ao Vídeo</a>
                             </div>
                         </div>
-                        
                     </div>
                 {% endfor %}
             </div>
         {% else %}
             <p class="text-center">Nenhum vídeo disponível no momento.</p>
         {% endif %}
+        <a href="/episodes" class="btn btn-primary" style="width: 100%">More Episodes</a>
+
     </div>
+
+    <!-- Link para o JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
 {% endblock %}
