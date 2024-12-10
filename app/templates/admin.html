@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <!-- Link para o Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJx3fF4Nf2tImyFf6Hwo0PtD2ywM4Q8n0QhV66g7RwwPvS6KnW4mM8eZzXjt" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Adicione aqui o video</h1>
+        <form action="/admin" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Título do Episodio:</label>
+                <input type="text" id="title" name="title" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="video_link" class="form-label">Link do Episodio:</label>
+                <input type="url" id="video_link" name="video_link" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="image_path" class="form-label">Caminho da Imagem:</label>
+                <input type="text" id="image_path" name="image_path" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar Vídeo</button>
+        </form>
+    </div>
+    
+    <!-- Link para o Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0GZxztVxE+XzZ6ZzmZG5wFZPb5Ftw5M8jDQ6dxV+JkTw+E5T" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}
